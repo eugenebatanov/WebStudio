@@ -1,0 +1,15 @@
+.logo {
+    color: var(--accent-color);
+
+    text-decoration: none;
+    font-family: raleway, cursive;
+    @include font ($fw: 700, $fs: 26, $lh: 31);
+}
+.logo {
+    &--black {
+        color: var(--black-logo-letters);
+    }
+    &--white {
+        color: var(--primary-white-color);
+    }
+}
