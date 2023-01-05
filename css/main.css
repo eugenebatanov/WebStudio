@@ -309,6 +309,45 @@ button {
     margin-left: 30px;
   }
 }
+.activity {
+  display: none;
+}
+
+@media screen and (min-width: 1200px) {
+  .activity {
+    display: block;
+    padding-top: 0;
+  }
+  .activity__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .activity__item:not(:first-child) {
+    padding-left: var(--project-item-gap);
+  }
+  .activity__img {
+    position: relative;
+  }
+  .activity__label {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 70px;
+    margin: 0;
+    padding-top: 27px;
+    padding-bottom: 27px;
+    background: rgba(47, 48, 58, 0.8);
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.1428571429;
+    letter-spacing: 0.03em;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--primary-white-color);
+  }
+}
 /* Team */
 .team {
   background-color: var(--secondary-background-color);
