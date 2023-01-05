@@ -1,5 +1,8 @@
 .clients {
   @include flex-align-justify;
+  flex-wrap: wrap;
+  margin-left: calc(-1 * var(--project-item-gap));
+  margin-top: calc(-1 * var(--project-item-gap));
   &__icons {
     fill: var(--inactive-icon);
     transition: fill var(--time-function);
@@ -7,15 +10,18 @@
 }
 
 .clients__items {
-  width: 170px;
+  width: calc(100% / 2 - var(--project-item-gap));
   height: 92px;
   border: 1px solid var(--inactive-icon);
   border-radius: 4px;
   transition: border var(--time-function);
 
-  &:not(:last-child) {
-    margin-right: 30px;
-  }
+  margin-left: var(--project-item-gap);
+  margin-top: var(--project-item-gap);
+
+  // &:not(:last-child) {
+  //   margin-right: 30px;
+  // }
 
   &:hover,
   &:focus {
@@ -33,3 +39,25 @@
     fill: var(--accent-color);
   }
 }
+
+@media screen and (min-width: 768px) {
+  .clients__items {
+    width: calc(100% / 3 - var(--project-item-gap));
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .clients {
+    flex-wrap: nowrap;
+    margin: 0;
+    &__items {
+      margin: 0;
+    }
+  }
+  .clients__items:not(:first-child) {
+    margin-left: var(--project-item-gap);
+  }
+}
+// .clients {
+//   
+// }

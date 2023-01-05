@@ -3,10 +3,6 @@
 }
 
 .team-list {
-  // display: flex;
-  // &__item + &__item {
-  //   padding-left: 30px;
-  // }
   &__name {
     @include font($fw: 500, $fs: 16, $lh: 19);
     text-align: center;
