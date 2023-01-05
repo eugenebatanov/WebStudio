@@ -681,19 +681,10 @@ button {
   margin-bottom: 0;
 }
 
-/* Footer */
 .footer {
   background-color: var(--footer-background-color);
   padding-top: 60px;
   padding-bottom: 60px;
-}
-.footer .container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
 }
 .footer .title {
   margin: 0;
@@ -704,24 +695,6 @@ button {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--primary-white-color);
-}
-
-.footer-contacts__address {
-  margin-top: 28px;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.7142857143;
-  letter-spacing: 0.03em;
-}
-.footer-contacts__map {
-  color: var(--primary-white-color);
-  margin-top: 0;
-  margin-bottom: 0;
-}
-.footer-contacts__mail {
-  margin-top: 12px;
-  margin-bottom: 12px;
 }
 
 .footer-contacts__link {
@@ -735,8 +708,38 @@ button {
   color: var(--accent-color);
 }
 
+.footer-contacts {
+  text-align: center;
+}
+.footer-contacts__address {
+  margin-top: 20px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.7142857143;
+  letter-spacing: 0.03em;
+}
+.footer-contacts__map {
+  color: var(--primary-white-color);
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.footer-contacts__mail {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.footer-soc__items {
+  width: 44px;
+  height: 44px;
+}
+.footer-soc__items:not(:last-child) {
+  margin-right: 10px;
+}
+
 .footer-soc {
-  margin-top: 12px;
+  text-align: center;
+  margin-bottom: 60px;
 }
 .footer-soc__list {
   display: -webkit-box;
@@ -751,14 +754,6 @@ button {
 }
 .footer-soc__icons {
   fill: var(--primary-white-color);
-}
-
-.footer-soc__items {
-  width: 44px;
-  height: 44px;
-}
-.footer-soc__items:not(:last-child) {
-  margin-right: 10px;
 }
 
 .footer-soc__link {
@@ -783,13 +778,13 @@ button {
 }
 
 .footer-sub {
-  margin-top: 12px;
+  text-align: center;
 }
 .footer-sub__group {
   margin-top: 20px;
 }
 .footer-sub__input {
-  width: 358px;
+  width: 100%;
   height: 50px;
   padding-left: 16px;
   outline: none;
@@ -810,7 +805,6 @@ button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-left: 12px;
   width: 200px;
   height: 50px;
   background-color: var(--accent-color);
@@ -830,6 +824,18 @@ button {
   fill: var(--primary-white-color);
 }
 
+@media screen and (max-width: 767px) {
+  .footer-contacts {
+    margin-bottom: 60px;
+  }
+  .footer-contacts__link {
+    display: block;
+  }
+  .footer-sub__input {
+    display: block;
+    margin-bottom: 20px;
+  }
+}
 /* Modal window */
 .backdrop {
   position: fixed;
