@@ -42,23 +42,38 @@ button {
 }
 
 .container {
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
-  width: 1200px;
+  @media screen and (min-width: 480px) {
+    width: 480px;
+  }
+  @media screen and (min-width: 768px) {
+    width: 768px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 1200px;
+  }
 }
 
 .section {
-  padding-top: 94px;
-  padding-bottom: 94px;
-  &-title {
-    color: var(--primary-text-color);
+  padding-top: 60px;
+  padding-bottom: 60px;
 
-    @include font($fw: 700, $fs: 36, $lh: 42);
-    text-align: center;
-
-    margin-top: 0;
-    margin-bottom: 50px;
+  @media screen and (min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
   }
+}
+
+.section-title {
+  margin-top: 0;
+  margin-bottom: 50px;
+  text-align: center;
+  
+  @include font($fw: 700, $fs: 36, $lh: 42);
+  
+  color: var(--primary-text-color);
 }
