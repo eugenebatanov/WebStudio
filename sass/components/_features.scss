@@ -10,6 +10,7 @@
     margin-top: 30px;
     margin-bottom: 10px;
     text-transform: uppercase;
+    text-align: center;
     @include font($fw: 700);
     color: var(--primary-text-color);
   }
@@ -20,24 +21,30 @@
 
     color: var(--secondary-text-color);
   }
-  &__item {
-    margin-bottom: 30px;
+}
+
+@media screen and (max-width: 768px) {
+  .feature__item:not(:first-child) {
+    margin-top: var(--project-item-gap);
   }
 }
 
 @media screen and (min-width: 768px) {
-  .feature__list {
-    display: flex;
-    flex-wrap: wrap;
-    text-align: left;
-    margin-left: calc(-1 * var(--project-item-gap));
-    margin-top: calc(-1 * var(--project-item-gap));
-  }
-  .feature__item {
-    width: calc(100% / 2 - var(--project-item-gap));
-    margin-left: var(--project-item-gap);
-    margin-top: var(--project-item-gap);
-    margin-bottom: 0;
+  .feature {
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+      margin-left: calc(-1 * var(--project-item-gap));
+      margin-top: calc(-1 * var(--project-item-gap));
+    }
+    &__item {
+      width: calc(100% / 2 - var(--project-item-gap));
+      margin-left: var(--project-item-gap);
+      margin-top: var(--project-item-gap);
+    }
+    &__title {
+      text-align: left;
+    }
   }
 }
 

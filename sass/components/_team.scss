@@ -1,15 +1,14 @@
-/* Team */
 .team {
   background-color: var(--secondary-background-color);
 }
 
 .team-list {
-  display: flex;
-  &__item + &__item {
-    padding-left: 30px;
-  }
+  // display: flex;
+  // &__item + &__item {
+  //   padding-left: 30px;
+  // }
   &__name {
-    @include font ($fw: 500, $fs: 16, $lh: 19);
+    @include font($fw: 500, $fs: 16, $lh: 19);
     text-align: center;
 
     margin-top: 0px;
@@ -21,7 +20,7 @@
     overflow: hidden;
   }
   &__text {
-    @include font ($fw: 400, $fs: 16, $lh: 19);
+    @include font($fw: 400, $fs: 16, $lh: 19);
     text-align: center;
     margin: 0;
     padding-bottom: 16px;
@@ -65,5 +64,39 @@
   &:hover .soc-list__icons,
   &:focus .soc-list__icons {
     fill: var(--primary-white-color);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .team-list__item:not(:first-child) {
+    margin-top: var(--project-item-gap);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .team-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: calc(-1 * var(--project-item-gap));
+    margin-top: calc(-1 * var(--project-item-gap));
+    &__item {
+      width: calc(100% / 2 - var(--project-item-gap));
+      margin-left: var(--project-item-gap);
+      margin-top: var(--project-item-gap);
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .team-list {
+    flex-wrap: nowrap;
+    margin: 0;
+  }
+  .team-list__item {
+    margin: 0;
+    &:not(:first-child) {
+      margin-left: var(--project-item-gap);
+    }
   }
 }

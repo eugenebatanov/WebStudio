@@ -70,10 +70,14 @@ button {
 
 .section-title {
   margin-top: 0;
-  margin-bottom: 50px;
+  margin-bottom: var(--project-item-gap);
   text-align: center;
   
   @include font($fw: 700, $fs: 36, $lh: 42);
   
   color: var(--primary-text-color);
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 50px;
+  }
 }
