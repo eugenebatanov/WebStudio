@@ -19,10 +19,6 @@
   margin-left: var(--project-item-gap);
   margin-top: var(--project-item-gap);
 
-  // &:not(:last-child) {
-  //   margin-right: 30px;
-  // }
-
   &:hover,
   &:focus {
     border: 1px solid var(--accent-color);
@@ -40,13 +36,13 @@
   }
 }
 
-@media screen and (min-width: 768px) {
+@include tablet {
   .clients__items {
     width: calc(100% / 3 - var(--project-item-gap));
   }
 }
 
-@media screen and (min-width: 1200px) {
+@include desktop {
   .clients {
     flex-wrap: nowrap;
     margin: 0;
@@ -58,6 +54,3 @@
     margin-left: var(--project-item-gap);
   }
 }
-// .clients {
-//   
-// }
