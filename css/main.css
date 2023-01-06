@@ -685,6 +685,7 @@ button {
   background-color: var(--footer-background-color);
   padding-top: 60px;
   padding-bottom: 60px;
+  text-align: center;
 }
 .footer .title {
   margin: 0;
@@ -709,7 +710,7 @@ button {
 }
 
 .footer-contacts {
-  text-align: center;
+  margin-bottom: 60px;
 }
 .footer-contacts__address {
   margin-top: 20px;
@@ -738,7 +739,6 @@ button {
 }
 
 .footer-soc {
-  text-align: center;
   margin-bottom: 60px;
 }
 .footer-soc__list {
@@ -777,15 +777,13 @@ button {
   background-color: var(--accent-color);
 }
 
-.footer-sub {
-  text-align: center;
-}
 .footer-sub__group {
   margin-top: 20px;
 }
 .footer-sub__input {
-  width: 100%;
+  display: block;
   height: 50px;
+  margin-bottom: 20px;
   padding-left: 16px;
   outline: none;
   background-color: var(--footer-background-color);
@@ -824,16 +822,50 @@ button {
   fill: var(--primary-white-color);
 }
 
-@media screen and (max-width: 767px) {
-  .footer-contacts {
-    margin-bottom: 60px;
-  }
+@media screen and (max-width: 768px) {
   .footer-contacts__link {
     display: block;
   }
   .footer-sub__input {
-    display: block;
-    margin-bottom: 20px;
+    width: 100%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .footer .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+  }
+  .footer-sub__input {
+    width: 450px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer .container {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    text-align: left;
+  }
+  .footer-contacts {
+    margin-bottom: 0;
+  }
+  .footer-soc {
+    margin-bottom: 0;
+  }
+  .footer-sub__input {
+    display: inline-block;
+    width: 358px;
+    margin-right: 12px;
   }
 }
 /* Modal window */
