@@ -1,13 +1,23 @@
 /* Site nav */
 .nav {
   display: flex;
+  justify-content: space-between;
   align-items: center;
 }
+
+@include mobile-max {
+  .hide-for-mobile {
+    display: none;
+  }
+}
+
 .site-nav {
   display: flex;
-  padding-left: 93px;
   &__item:not(:last-child) {
     margin-right: 50px;
+  }
+  @include desktop {
+    padding-left: 93px;    
   }
 }
 .site-nav__link {
@@ -18,7 +28,7 @@
   color: var(--primary-text-color);
 
   text-decoration: none;
-  @include font ($fw: 500, $ls: 0.02);
+  @include font($fw: 500, $ls: 0.02);
 
   transition: color var(--time-function);
   &:hover,
@@ -47,15 +57,22 @@
 
 /* Contact nav */
 .contact-nav {
-  display: flex;
-  margin-left: auto;
-  &__item + &__item {
-    padding-left: 40px;
+  @include tablet {
+    &__item + &__item {
+      margin-top: 10px;
+    }
+  }
+  @include desktop {
+    display: flex;
+    &__item + &__item {
+      padding-left: 40px;
+      margin-top: 0;
+    }
   }
 }
 .contact-nav__link {
   text-decoration: none;
-  @include font ($fw: 500, $ls: 0.02);
+  @include font($fw: 500, $ls: 0.02);
 
   color: var(--secondary-text-color);
 

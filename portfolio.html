@@ -21,16 +21,26 @@
     <header class="header">
       <div class="container">
         <nav class="nav">
-          <!--Logo-->
-          <!-- <a href="/" class="logo">Web<span class="logo--black">Studio</span></a> -->
-          <!--Links to other pages-->
+          <!-- Logo-->
+          <a href="/" class="logo">Web<span class="logo--black">Studio</span></a>
+
+          <button type="button" class="switch-menu js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+            <svg width="40" height="40" aria-label="Перемикач мобільного меню">
+              <use class="menu-toggle__icon" href="./images/icons.svg#menu"></use>
+            </svg>
+          </button>
+
+          <!--Links to other pages -->
+          <div class="hide-for-mobile">
           <ul class="site-nav list">
             <li class="site-nav__item"><a href="./index.html" class="site-nav__link">Студія</a></li>
             <li class="site-nav__item"><a href="./portfolio.html" class="site-nav__link site-nav__current">Портфоліо</a></li>
-            <!-- <li class="site-nav__item"><a href="" class="site-nav__link">Контакти</a></li> -->
+            <li class="site-nav__item"><a href="" class="site-nav__link">Контакти</a></li>
           </ul>
-          <!--Contacts-->
-          <!-- <ul class="contact-nav list">
+          </div>
+          <!-- Contacts -->
+          <div class="hide-for-mobile">
+          <ul class="contact-nav list">
             <li class="contact-nav__item">
               <a href="mailto:info@devstudio.com" class="contact-nav__link">
                 <svg class="contact-nav__icon" width="16" height="12">
@@ -46,10 +56,74 @@
                 </svg>
                 +38 096 111 11 11
               </a>
-            </li> -->
+            </li>
           </ul>
+          </div>
         </nav>
       </div>
+          <!-- Mobile menu -->
+          <div class="menu-container js-menu-container" id="mobile-menu">
+            <button class="switch-menu js-close-menu">
+              <svg width="40" height="40" aria-label="Перемикач мобільного меню">
+                <use class="menu-toggle__icon" href="./images/icons.svg#cross"></use>
+              </svg>
+            </button>
+          
+            <div class="mobile-menu">
+              <!--Links to other pages-->
+              <ul class="site-navigation list">
+                <li class="site-navigation__item">
+                  <a href="./index.html" class="site-navigation__link">Студія</a>
+                </li>
+                <li class="site-navigation__item">
+                  <a href="./portfolio.html" class="site-navigation__link">Портфоліо</a>
+                </li>
+                <li class="site-navigation__item">
+                  <a href="#" class="site-navigation__link">Контакти</a>
+                </li>
+              </ul>
+          
+              <div>
+                <!--Contacts-->
+                <ul class="contact-navigation list">
+                  <li class="contact-navigation__item">
+                    <a href="tel:+380961111111" class="contact-navigation__link">
+                      +38 096 111 11 11
+                    </a>
+                  </li>
+                  <li class="contact-navigation__item">
+                    <a href="mailto:info@devstudio.com" class="contact-navigation__link contact-navigation__mail">
+                      info@devstudio.com
+                    </a>
+                  </li>
+                </ul>
+          
+                <!-- Social links -->
+                <ul class="soc-navigation list">
+                  <li class="soc-navigation__item">
+                    <a href="#" class="soc-navigation__link">
+                      Instagram
+                    </a>
+                  </li>
+                  <li class="soc-navigation__item">
+                    <a href="#" class="soc-navigation__link">
+                      Twitter
+                    </a>
+                  </li>
+                  <li class="soc-navigation__item">
+                    <a href="#" class="soc-navigation__link">
+                      Facebook
+                    </a>
+                  </li>
+                  <li class="soc-navigation__item">
+                    <a href="#" class="soc-navigation__link">
+                      LinkedIn
+                    </a>
+                  </li>
+                </ul>                
+              </div>                       
+            </div>
+          </div>
     </header>
     <!-- Main content -->
     <main>
@@ -296,5 +370,6 @@
         </form>
       </div>
     </footer>
+    <script defer src="js/mobile-menu.js"></script>
   </body>
 </html>
