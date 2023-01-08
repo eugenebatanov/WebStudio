@@ -4,6 +4,9 @@
     text-decoration: none;
     font-family: raleway, cursive;
     @include font ($fw: 700, $fs: 26, $lh: 31);
+    @include desktop {
+        @include font ($fw: 700, $fs: 24, $lh: 28);
+    }
 }
 .logo {
     &--black {

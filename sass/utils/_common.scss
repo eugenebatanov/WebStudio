@@ -73,7 +73,11 @@ button {
   margin-bottom: var(--project-item-gap);
   text-align: center;
   
+  @include font($fw: 700, $fs: 28, $lh: 33);
+
+  @include desktop {
   @include font($fw: 700, $fs: 36, $lh: 42);
+  }
   
   color: var(--primary-text-color);
 

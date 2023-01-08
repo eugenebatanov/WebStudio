@@ -78,6 +78,7 @@
 .soc-navigation {
   margin-top: 65px;
   display: flex;
+  flex-wrap: wrap;
   &__link {
     text-decoration: none;
     @include font($fw: 500, $fs: 18, $lh: 22, $ls: 0.02);
