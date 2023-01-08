@@ -5,6 +5,9 @@
   margin-right: auto;
   
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/bannermobile480.jpg);
+  @include retina {
+      background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/bannermobile-2x.jpg);
+  }
   background-color: #2f303a;
   background-repeat: no-repeat;
   background-size: cover;
@@ -13,12 +16,18 @@
   @include tablet {
     max-width: 768px;
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/bannertablet768.jpg);
+    @include retina {
+        background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/bannertablet-2x.jpg);
+    }
   }
 
   @include desktop {
     max-width: 1600px;
     height: 600px;
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/banner.jpg);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/bannerdesktop1600.jpg);
+    @include retina {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/bannerdesktop-2x.jpg);
+    }
   }
 
   &__container {
