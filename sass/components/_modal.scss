@@ -14,6 +14,9 @@
     transform: translate(-50%, -50%) scaleY(1);
 
     width: 528px;
+    @media screen and (max-width: 557px) {
+      width: 95%;
+    }
     min-height: 581px;
     padding: 40px;
 

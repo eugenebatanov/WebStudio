@@ -1073,6 +1073,11 @@ button {
   transition: transform var(--time-function);
   transition: transform var(--time-function), -webkit-transform var(--time-function);
 }
+@media screen and (max-width: 557px) {
+  .backdrop__modal {
+    width: 95%;
+  }
+}
 
 .backdrop.is-hidden {
   opacity: 0;
