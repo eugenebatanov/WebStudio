@@ -3,27 +3,28 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-@include mobile-max {
-  .hide-for-mobile {
-    display: none;
+  @include tablet {
+    justify-content: start;
   }
 }
 
 .site-nav {
-  display: flex;
-  &__item:not(:last-child) {
-    margin-right: 50px;
+  @include mobile-max {
+    display: none;
   }
-  @include desktop {
+  @include tablet {
+    display: flex;
     padding-left: 93px;    
+    &__item:not(:last-child) {
+    margin-right: 50px;
+    }
   }
 }
+
 .site-nav__link {
   display: block;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 32px;
+  padding-bottom: 32px;
 
   color: var(--primary-text-color);
 
@@ -57,7 +58,11 @@
 
 /* Contact nav */
 .contact-nav {
+  @include mobile-max {
+    display: none;
+  }
   @include tablet {
+    margin-left: auto;
     &__item + &__item {
       margin-top: 10px;
     }
