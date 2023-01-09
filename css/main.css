@@ -498,7 +498,7 @@ button {
   color: var(--secondary-text-color);
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .feature__item:not(:first-child) {
     margin-top: var(--project-item-gap);
   }

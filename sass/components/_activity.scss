@@ -2,7 +2,7 @@
   display: none;
 }
 
-@media screen and (min-width: 1200px) {
+@include desktop {
   .activity {
     display: block;
     padding-top: 0;

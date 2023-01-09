@@ -23,13 +23,13 @@
   }
 }
 
-@media screen and (max-width: 768px) {
+@include mobile-max {
   .feature__item:not(:first-child) {
     margin-top: var(--project-item-gap);
   }
 }
 
-@media screen and (min-width: 768px) {
+@include tablet {
   .feature {
     &__list {
       display: flex;
@@ -48,7 +48,7 @@
   }
 }
 
-@media screen and (min-width: 1200px) {
+@include desktop {
   .feature__list {
     margin: 0;
   }
