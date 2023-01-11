@@ -1129,6 +1129,7 @@ button {
   background-color: rgba(0, 0, 0, 0.2);
   -webkit-transition: opacity var(--time-function), visibility var(--time-function);
   transition: opacity var(--time-function), visibility var(--time-function);
+  overflow-y: scroll;
 }
 .backdrop__modal {
   position: absolute;
