@@ -143,37 +143,34 @@
           <ul class="activity__list list">
             <li class="activity__item">
               <div class="activity__img">
-                <img
-                  srcset="./images/box1.jpg 1x,
-                  ./images/box1-2x.jpg 2x"
-                  src="./images/box1.jpg"
-                  alt="фото з клавіатурою"
-                  width="370"
-                />
+                <picture>
+                  <source srcset="./images/box1.jpg 1x,
+                                  ./images/box1-2x.jpg 2x"
+                          media="(min-width:1200px)">
+                  <img src="./images/box1.jpg" alt="фото з клавіатурою" width="370"/>
+                </picture>
                 <p class="activity__label">Десктопні додатки</p>
               </div>
             </li>
             <li class="activity__item">
               <div class="activity__img">
-                <img
-                  srcset="./images/box2.jpg 1x,
-                  ./images/box2-2x.jpg 2x"
-                  src="./images/box2.jpg"
-                  alt="фото з телефоном"
-                  width="370"
-                />
+                <picture>
+                  <source srcset="./images/box2.jpg 1x,
+                                  ./images/box2-2x.jpg 2x"
+                          media="(min-width:1200px)">
+                  <img src="./images/box2.jpg" alt="фото з телефоном" width="370"/>
+                </picture>
                 <p class="activity__label">Мобільні додатки</p>
               </div>
             </li>
             <li class="activity__item">
               <div class="activity__img">
-                <img
-                  srcset="./images/box3.jpg 1x,
-                  ./images/box3-2x.jpg 2x"
-                  src="./images/box3.jpg"
-                  alt="фото з планшетом"
-                  width="370"
-                />
+                <picture>
+                  <source srcset="./images/box3.jpg 1x,
+                                  ./images/box3-2x.jpg 2x"
+                          media="(min-width:1200px)">
+                  <img src="./images/box3.jpg" alt="фото з планшетом" width="370"/>
+                </picture>
                 <p class="activity__label">Дизайнерські рішення</p>
               </div>
             </li>
@@ -237,13 +234,18 @@
             </li>
             <li class="team-list__item">
               <div class="team-list__cards">
-                <img
-                  srcset="./images/foto2.jpg 1x,
-                  ./images/foto2-2x.jpg 2x"
-                  src="./images/foto2.jpg"
-                  alt="Фото Ольги Рєпіної"
-                  width="270"
-                />
+                <picture>
+                  <source srcset="./images/foto2desktop.jpg 1x,
+                    ./images/foto2desktop-2x.jpg 2x"
+                    media="(min-width:1200px)">
+                  <source srcset="./images/foto2tablet.jpg 1x,
+                    ./images/foto2tablet-2x.jpg 2x"
+                    media="(min-width:768px)">
+                  <source srcset="./images/foto2mobile.jpg 1x,
+                    ./images/foto2mobile-2x.jpg 2x"
+                    media="(max-width:767px)">
+                  <img src="./images/foto2desktop.jpg" alt="Фото Ольги Рєпіної" width="270"/>
+                </picture>
                 <div class="team-list__person">
                   <h3 class="team-list__name">Ольга Рєпіна</h3>
                   <p class="team-list__text" lang="en">Frontend Developer</p>
@@ -282,12 +284,18 @@
             </li>
             <li class="team-list__item">
               <div class="team-list__cards">
-                <img
-                  srcset="./images/foto3.jpg 1x,
-                  ./images/foto3-2x.jpg 2x"
-                  src="./images/foto3.jpg"
-                  alt="Фото Миколи Тарасова"
-                  width="270"/>
+                <picture>
+                  <source srcset="./images/foto3desktop.jpg 1x,
+                    ./images/foto3desktop-2x.jpg 2x"
+                    media="(min-width:1200px)">
+                  <source srcset="./images/foto3tablet.jpg 1x,
+                    ./images/foto3tablet-2x.jpg 2x"
+                    media="(min-width:768px)">
+                  <source srcset="./images/foto3mobile.jpg 1x,
+                    ./images/foto3mobile-2x.jpg 2x"
+                    media="(max-width:767px)">
+                  <img src="./images/foto3desktop.jpg" alt="Фото Миколи Тарасова" width="270"/>
+                </picture>
                 <div class="team-list__person">
                   <h3 class="team-list__name">Микола Тарасов</h3>
                   <p class="team-list__text" lang="en">Marketing</p>
@@ -326,12 +334,18 @@
             </li>
             <li class="team-list__item">
               <div class="team-list__cards">
-                <img
-                  srcset="./images/foto4.jpg 1x,
-                  ./images/foto4-2x.jpg 2x"
-                  src="./images/foto4.jpg"
-                  alt="Фото Михайла Єрмакова"
-                  width="270"/>
+                <picture>
+                  <source srcset="./images/foto4desktop.jpg 1x,
+                    ./images/foto4desktop-2x.jpg 2x"
+                    media="(min-width:1200px)">
+                  <source srcset="./images/foto4tablet.jpg 1x,
+                    ./images/foto4tablet-2x.jpg 2x"
+                    media="(min-width:768px)">
+                  <source srcset="./images/foto4mobile.jpg 1x,
+                    ./images/foto4mobile-2x.jpg 2x"
+                    media="(max-width:767px)">
+                  <img src="./images/foto4desktop.jpg" alt="Фото Михайла Єрмакова" width="270"/>
+                </picture>
                 <div class="team-list__person">
                   <h3 class="team-list__name">Михайло Єрмаков</h3>
                   <p class="team-list__text" lang="en">UI Designer</p>
