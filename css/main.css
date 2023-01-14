@@ -929,6 +929,8 @@ button {
   left: 0;
   width: 100%;
   height: 100%;
+  margin: 0;
+  padding: 15% 5%;
   background-color: rgba(33, 150, 243, 0.9);
   -webkit-transform: translateY(100%);
           transform: translateY(100%);
@@ -937,12 +939,18 @@ button {
   transition: transform var(--time-function);
   transition: transform var(--time-function), -webkit-transform var(--time-function);
   font-weight: 400;
-  font-size: 18px;
-  line-height: 1.5555555556;
+  font-size: 4vw;
+  line-height: 1.56;
   letter-spacing: 0.03em;
   color: var(--primary-white-color);
-  margin: 0;
-  padding: 63px 24px;
+}
+@media screen and (min-width: 480px) {
+  .project__overlay {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.5555555556;
+    letter-spacing: 0.03em;
+  }
 }
 
 .project__link {
