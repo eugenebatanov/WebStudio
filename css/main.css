@@ -39,6 +39,11 @@ img {
   min-width: 100%;
   height: auto;
 }
+@media screen and (max-width: 767px) {
+  img {
+    width: 100%;
+  }
+}
 
 button {
   font-family: inherit;
@@ -333,10 +338,18 @@ button {
 .site-navigation__link {
   text-decoration: none;
   font-weight: 500;
-  font-size: 40px;
+  font-size: 8.89vw;
   line-height: 1.175;
   letter-spacing: 0.02em;
   color: var(--primary-text-color);
+}
+@media screen and (min-width: 480px) {
+  .site-navigation__link {
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 1.175;
+    letter-spacing: 0.02em;
+  }
 }
 .site-navigation__link:hover, .site-navigation__link:focus {
   color: var(--accent-color);
@@ -349,16 +362,32 @@ button {
   text-decoration: none;
   color: var(--accent-color);
   font-weight: 500;
-  font-size: 34px;
-  line-height: 1.1764705882;
+  font-size: 7.56vw;
+  line-height: 1.18;
   letter-spacing: 0.02em;
+}
+@media screen and (min-width: 480px) {
+  .contact-navigation__link {
+    font-weight: 500;
+    font-size: 34px;
+    line-height: 1.1764705882;
+    letter-spacing: 0.02em;
+  }
 }
 .contact-navigation__mail {
   font-weight: 500;
-  font-size: 24px;
-  line-height: 1.1666666667;
+  font-size: 5.33vw;
+  line-height: 1.17;
   letter-spacing: 0.02em;
   color: var(--secondary-text-color);
+}
+@media screen and (min-width: 480px) {
+  .contact-navigation__mail {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.1666666667;
+    letter-spacing: 0.02em;
+  }
 }
 .contact-navigation__item:not(:last-child) {
   margin-bottom: 32px;
@@ -375,10 +404,18 @@ button {
 .soc-navigation__link {
   text-decoration: none;
   font-weight: 500;
-  font-size: 18px;
-  line-height: 1.2222222222;
+  font-size: 4vw;
+  line-height: 1.22;
   letter-spacing: 0.02em;
   color: var(--accent-color);
+}
+@media screen and (min-width: 480px) {
+  .soc-navigation__link {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.2222222222;
+    letter-spacing: 0.02em;
+  }
 }
 .soc-navigation__item:not(:last-child) {
   padding-right: 10px;

@@ -48,12 +48,15 @@
 .site-navigation {
   &__link {
     text-decoration: none;
-    @include font($fw: 500, $fs: 40, $lh: 47, $ls: 0.02);
+    @include font-adapt(500, 8.89, 1.175, 0.02);
+    @include mobile {
+      @include font($fw: 500, $fs: 40, $lh: 47, $ls: 0.02);
+    }
     color: var(--primary-text-color);
   }
   &__link:hover,
   &__link:focus {
-    color:var(--accent-color);
+    color: var(--accent-color);
   }
   &__item:not(:last-child) {
     margin-bottom: 32px;
@@ -62,17 +65,24 @@
 
 .contact-navigation {
   &__link {
-  text-decoration: none;
-  color: var(--accent-color);
-  @include font ($fw: 500, $fs: 34, $lh: 40, $ls: 0.02);
+    text-decoration: none;
+    color: var(--accent-color);
+    @include font-adapt(500, 7.56, 1.18, 0.02);
+    @include mobile {
+      @include font(500, 34, 40, 0.02);
+    }
   }
   &__mail {
-    @include font ($fw: 500, $fs: 24, $lh: 28, $ls: 0.02);
+    @include font-adapt (500, 5.33, 1.17, 0.02);
+    @include mobile {
+      @include font(500, 24, 28, 0.02);
+    }
+    
     color: var(--secondary-text-color);
-    }
-    &__item:not(:last-child) {
-      margin-bottom: 32px;
-    }
+  }
+  &__item:not(:last-child) {
+    margin-bottom: 32px;
+  }
 }
 
 .soc-navigation {
@@ -81,7 +91,11 @@
   flex-wrap: wrap;
   &__link {
     text-decoration: none;
-    @include font($fw: 500, $fs: 18, $lh: 22, $ls: 0.02);
+    @include font-adapt(500, 4, 1.22, 0.02);
+    @include mobile {
+      @include font($fw: 500, $fs: 18, $lh: 22, $ls: 0.02);
+    }
+
     color: var(--accent-color);
   }
   &__item:not(:last-child) {

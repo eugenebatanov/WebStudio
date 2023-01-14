@@ -16,6 +16,9 @@ img {
   display: block;
   min-width: 100%;
   height: auto;
+  @include mobile-max {
+    width: 100%;
+  }
 }
 
 button {
